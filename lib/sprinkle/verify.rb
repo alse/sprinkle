@@ -60,7 +60,8 @@ module Sprinkle
   #   end
   class Verify
     include Sprinkle::Attributes
-    attr_accessor :package, :description, :commands #:nodoc:
+    include Sprinkle::Sudo
+    attr_accessor :package, :description, :commands, :options #:nodoc:
     
     class <<self
       # Register a verification module
